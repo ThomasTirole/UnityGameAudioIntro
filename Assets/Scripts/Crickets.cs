@@ -23,7 +23,7 @@ public class Crickets : MonoBehaviour
             return;
         // distance from us to the player
         float dist = Vector3.Distance(transform.position, player.position);
-        if(dist > stopDistance)
+        if(dist < stopDistance)
             audioSource.volume = defaultVolume;
         else
             audioSource.volume = 0.0f;
